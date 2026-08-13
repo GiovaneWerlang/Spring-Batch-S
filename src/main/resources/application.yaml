@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: bat
+  datasource:
+    url:  jdbc:postgresql://${DATABASE_HOST:localhost}:5432/${POSTGRES_DB:batch}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:admin}
+    driver-class-name: org.postgresql.Driver
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
